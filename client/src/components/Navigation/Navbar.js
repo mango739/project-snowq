@@ -1,9 +1,9 @@
-import { NavLink, Link } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom";
 
 function Navbar() {
   return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <span>DreamSchool</span>
+          <h1>Dreamschools</h1>
           <div className="collapse navbar-collapse justify-content-end">
             <ul className="navbar-nav">
                 <li className="nav-item">

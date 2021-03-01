@@ -49,24 +49,24 @@ class SchoolForm extends React.Component {
             <div>
                 <form onSubmit={this.props.onSubmit}>
                     <div className="form-group">
-                        <label>Name</label>
+                        <label className="form-label">Name</label>
                         <input type="text" className="form-control" value={this.state.name} onChange={this.onChangeName} required/>
                     </div>
                     <div className="form-group">
-                        <label>About</label>
-                        <input type="text" className="form-control" value={this.state.description} onChange={this.onChangeDescription} required/>
+                        <label className="form-label">About</label>
+                        <textarea className="form-control" value={this.state.description} onChange={this.onChangeDescription} required></textarea>
                     </div>
                     <div className="form-group">
-                        <label>Location</label>
-                        <input type="text" className="form-control" value={this.state.location} onChange={this.onChangeLocation} required/>
+                        <label className="form-label">Location</label>
+                        <textarea className="form-control" value={this.state.location} onChange={this.onChangeLocation} required></textarea>
                     </div>
                     <div className="form-group">
-                        <label>Admission</label>
-                        <input type="text" className="form-control" value={this.state.admission} onChange={this.onChangeAdmission} required/>
+                        <label className="form-label">Admission</label>
+                        <textarea className="form-control" value={this.state.admission} onChange={this.onChangeAdmission} required></textarea>
                     </div>
                     <div className="form-group">
-                        <label>Image</label>
-                        <input type="text" className="form-control" value={this.state.image} onChange={this.onChangeImage} required/>
+                        <label className="form-label">Image</label>
+                        <textarea className="form-control" value={this.state.image} onChange={this.onChangeImage} required></textarea>
                     </div>
                     <div className="form-group">
                         <input type="submit" className="btn btn-primary" value={this.props.buttonValue} required/>
