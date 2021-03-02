@@ -50,26 +50,26 @@ class SchoolForm extends React.Component {
                 <form onSubmit={this.props.onSubmit}>
                     <div className="form-group">
                         <label className="form-label">Name</label>
-                        <input type="text" className="form-control" value={this.state.name} onChange={this.onChangeName} required/>
+                        <input type="text" className="form-control" value={this.state.name} onChange={this.onChangeName} placeholder={this.props.defaultValue ? this.props.defaultValue.name : ''} required/>
                     </div>
                     <div className="form-group">
                         <label className="form-label">About</label>
-                        <textarea className="form-control" value={this.state.description} onChange={this.onChangeDescription} required></textarea>
+                        <textarea className="form-control" value={this.state.description} onChange={this.onChangeDescription} placeholder={this.props.defaultValue ? this.props.defaultValue.description : ''} required></textarea>
                     </div>
                     <div className="form-group">
                         <label className="form-label">Location</label>
-                        <textarea className="form-control" value={this.state.location} onChange={this.onChangeLocation} required></textarea>
+                        <textarea className="form-control" value={this.state.location} onChange={this.onChangeLocation} placeholder={this.props.defaultValue ? this.props.defaultValue.location : ''} required></textarea>
                     </div>
                     <div className="form-group">
                         <label className="form-label">Admission</label>
-                        <textarea className="form-control" value={this.state.admission} onChange={this.onChangeAdmission} required></textarea>
+                        <textarea className="form-control" value={this.state.admission} onChange={this.onChangeAdmission} placeholder={this.props.defaultValue ? this.props.defaultValue.admission : ''} required></textarea>
                     </div>
                     <div className="form-group">
                         <label className="form-label">Image</label>
-                        <textarea className="form-control" value={this.state.image} onChange={this.onChangeImage} required></textarea>
+                        <input className="form-control" type="file" value={this.state.image} onChange={this.onChangeImage} placeholder={this.props.defaultValue ? this.props.defaultValue.image : ''} required/>
                     </div>
                     <div className="form-group">
-                        <input type="submit" className="btn btn-primary" value={this.props.buttonValue} required/>
+                        <input type="submit" className="btn btn-dark" value={this.props.buttonValue} required/>
                     </div>
                 </form>
             </div>

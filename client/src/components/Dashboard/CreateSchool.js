@@ -1,4 +1,5 @@
 import React  from 'react';
+import axios from 'axios';
 import SchoolForm from './SchoolForm';
 
 class CreateSchool extends React.Component {
@@ -26,7 +27,9 @@ class CreateSchool extends React.Component {
             image: this.state.image
         };
 
-        console.log(school);
+        axios.post('http://localhost:5000/schools/add', school)
+            .then(res => console.log(res.data))
+            .catch(err => console.log(err));
 
         window.location = '/school';
     }

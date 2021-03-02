@@ -1,11 +1,13 @@
-function School() {
+import { Link } from "react-router-dom";
+
+function School(props) {
   return (
       <div className="school-card card">
-          <img className="card-img-top" src="..." alt="Card image" />
+          <img className="card-img-top" src="..." alt="Card img"/>
           <div className="card-body">
-            <h5 class="card-title">School Name</h5>
-            <p class="card-text">School Description</p>
-            <a href="/update-school" className="btn btn-dark">Update School</a>
+            <h5 class="card-title">{props.name}</h5>
+            <p class="card-text">{props.description}</p>
+            <Link to={"/update/" + props.index} className="btn btn-dark">Update School</Link>
           </div>
       </div>
   );
